@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, jsonify
 import numpy as np
 from scipy.optimize import minimize, NonlinearConstraint
 
-app = Flask(__name__)
+app = Flask(__name__,template_folder='')
 
 def optimize_weights(v, A):
     n = len(v)
